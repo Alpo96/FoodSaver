@@ -1,0 +1,14 @@
+﻿<Window x:Class="FoodSaver.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FoodSaver"
+        mc:Ignorable="d"
+        Title="Login" Height="420" Width="777" Closing="Window_Closing">
+    <Grid>
+        <Image x:Name="GoBuy" HorizontalAlignment="Left" Height="384" VerticalAlignment="Top" Width="384" Source="Images/foodbucketBuy_640.png" MouseLeftButtonDown="MainWindow_MouseDown"/>
+        <Image x:Name="GoSell" HorizontalAlignment="Left" Height="384" Margin="384,0,0,0" VerticalAlignment="Top" Width="384" Source="Images\FoodBucketSell_640.png" MouseLeftButtonDown="BuySell_MouseDown"/>
+
+    </Grid>
+</Window>

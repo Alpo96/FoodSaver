@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FoodDB" Class="LinqToSqlDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8Q32GCP;Initial Catalog=FoodDB;Persist Security Info=True;User ID=sa;Pooling=False" SettingsObjectName="FoodSaver.Properties.Settings" SettingsPropertyName="FoodDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Food" Member="Foods">
+    <Type Name="Food">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Food_FoodShopRelation" Member="FoodShopRelations" ThisKey="Id" OtherKey="FoodID" Type="FoodShopRelation" />
+      <Association Name="Food_FoodShopRelationBuy" Member="FoodShopRelationBuys" ThisKey="Id" OtherKey="FoodID" Type="FoodShopRelationBuy" />
+      <Association Name="Food_History" Member="Histories" ThisKey="Id" OtherKey="FoodID" Type="History" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ValueTable" Member="ValueTables">
+    <Type Name="ValueTable">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FoodValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ValueTable_FoodShopRelation" Member="FoodShopRelations" ThisKey="Id" OtherKey="ValueTableID" Type="FoodShopRelation" />
+      <Association Name="ValueTable_FoodShopRelationBuy" Member="FoodShopRelationBuys" ThisKey="Id" OtherKey="ValueTableID" Type="FoodShopRelationBuy" />
+      <Association Name="ValueTable_History" Member="Histories" ThisKey="Id" OtherKey="ValueTableID" Type="History" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FoodQuality" Member="FoodQualities">
+    <Type Name="FoodQuality">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Quality" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FoodQuality_FoodShopRelation" Member="FoodShopRelations" ThisKey="Id" OtherKey="FoodQualityID" Type="FoodShopRelation" />
+      <Association Name="FoodQuality_FoodShopRelationBuy" Member="FoodShopRelationBuys" ThisKey="Id" OtherKey="FoodQualityID" Type="FoodShopRelationBuy" />
+      <Association Name="FoodQuality_History" Member="Histories" ThisKey="Id" OtherKey="FoodQualityID" Type="History" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FoodShopRelation" Member="FoodShopRelations">
+    <Type Name="FoodShopRelation">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FoodID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ShopLocationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ImagesTableID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ValueTableID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FoodQualityID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Food_FoodShopRelation" Member="Food" ThisKey="FoodID" OtherKey="Id" Type="Food" IsForeignKey="true" />
+      <Association Name="FoodQuality_FoodShopRelation" Member="FoodQuality" ThisKey="FoodQualityID" OtherKey="Id" Type="FoodQuality" IsForeignKey="true" />
+      <Association Name="ValueTable_FoodShopRelation" Member="ValueTable" ThisKey="ValueTableID" OtherKey="Id" Type="ValueTable" IsForeignKey="true" />
+      <Association Name="ImagesTable_FoodShopRelation" Member="ImagesTable" ThisKey="ImagesTableID" OtherKey="Id" Type="ImagesTable" IsForeignKey="true" />
+      <Association Name="ShopLocation_FoodShopRelation" Member="ShopLocation" ThisKey="ShopLocationID" OtherKey="Id" Type="ShopLocation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FoodShopRelationBuy" Member="FoodShopRelationBuys">
+    <Type Name="FoodShopRelationBuy">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FoodID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ShopLocationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ImagesTableID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ValueTableID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoginTableID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FoodQualityID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Food_FoodShopRelationBuy" Member="Food" ThisKey="FoodID" OtherKey="Id" Type="Food" IsForeignKey="true" />
+      <Association Name="FoodQuality_FoodShopRelationBuy" Member="FoodQuality" ThisKey="FoodQualityID" OtherKey="Id" Type="FoodQuality" IsForeignKey="true" />
+      <Association Name="ValueTable_FoodShopRelationBuy" Member="ValueTable" ThisKey="ValueTableID" OtherKey="Id" Type="ValueTable" IsForeignKey="true" />
+      <Association Name="ImagesTable_FoodShopRelationBuy" Member="ImagesTable" ThisKey="ImagesTableID" OtherKey="Id" Type="ImagesTable" IsForeignKey="true" />
+      <Association Name="LoginTable_FoodShopRelationBuy" Member="LoginTable" ThisKey="LoginTableID" OtherKey="Id" Type="LoginTable" IsForeignKey="true" />
+      <Association Name="ShopLocation_FoodShopRelationBuy" Member="ShopLocation" ThisKey="ShopLocationID" OtherKey="Id" Type="ShopLocation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.History" Member="Histories">
+    <Type Name="History">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FoodID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ShopLocationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ImagesTableID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ValueTableID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoginTableID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Refund" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FoodQualityID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Food_History" Member="Food" ThisKey="FoodID" OtherKey="Id" Type="Food" IsForeignKey="true" />
+      <Association Name="FoodQuality_History" Member="FoodQuality" ThisKey="FoodQualityID" OtherKey="Id" Type="FoodQuality" IsForeignKey="true" />
+      <Association Name="ValueTable_History" Member="ValueTable" ThisKey="ValueTableID" OtherKey="Id" Type="ValueTable" IsForeignKey="true" />
+      <Association Name="ImagesTable_History" Member="ImagesTable" ThisKey="ImagesTableID" OtherKey="Id" Type="ImagesTable" IsForeignKey="true" />
+      <Association Name="LoginTable_History" Member="LoginTable" ThisKey="LoginTableID" OtherKey="Id" Type="LoginTable" IsForeignKey="true" />
+      <Association Name="ShopLocation_History" Member="ShopLocation" ThisKey="ShopLocationID" OtherKey="Id" Type="ShopLocation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ImagesTable" Member="ImagesTables">
+    <Type Name="ImagesTable">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ImagePath" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Association Name="ImagesTable_FoodShopRelation" Member="FoodShopRelations" ThisKey="Id" OtherKey="ImagesTableID" Type="FoodShopRelation" />
+      <Association Name="ImagesTable_FoodShopRelationBuy" Member="FoodShopRelationBuys" ThisKey="Id" OtherKey="ImagesTableID" Type="FoodShopRelationBuy" />
+      <Association Name="ImagesTable_History" Member="Histories" ThisKey="Id" OtherKey="ImagesTableID" Type="History" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoginTable" Member="LoginTables">
+    <Type Name="LoginTable">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserCoin" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="LoginTable_FoodShopRelationBuy" Member="FoodShopRelationBuys" ThisKey="Id" OtherKey="LoginTableID" Type="FoodShopRelationBuy" />
+      <Association Name="LoginTable_History" Member="Histories" ThisKey="Id" OtherKey="LoginTableID" Type="History" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ShopLocation" Member="ShopLocations">
+    <Type Name="ShopLocation">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ShopLocation_FoodShopRelation" Member="FoodShopRelations" ThisKey="Id" OtherKey="ShopLocationID" Type="FoodShopRelation" />
+      <Association Name="ShopLocation_FoodShopRelationBuy" Member="FoodShopRelationBuys" ThisKey="Id" OtherKey="ShopLocationID" Type="FoodShopRelationBuy" />
+      <Association Name="ShopLocation_History" Member="Histories" ThisKey="Id" OtherKey="ShopLocationID" Type="History" />
+    </Type>
+  </Table>
+</Database>

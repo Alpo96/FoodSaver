@@ -1,0 +1,37 @@
+﻿<Window x:Class="FoodSaver.BuySell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FoodSaver"
+        mc:Ignorable="d"
+        Title="Sell the Products" Height="450" Width="1000" Closing="Window_Closing">
+    <Grid>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/mushroomwalpapper_1280.png" Stretch="UniformToFill"/>
+            </Grid.Background>
+        </Grid>
+        <TextBox x:Name ="NewLine" HorizontalAlignment="Left" Height="23" Margin="108,296,0,0" TextWrapping="Wrap" Text="Please Enter the new line" VerticalAlignment="Top" Width="587" GotFocus="TextBox_GotFocus"/>
+        <ListBox x:Name ="ListShop"  HorizontalAlignment="Left" Height="288" Margin="259,3,0,0" VerticalAlignment="Top" Width="142"/>
+        <ListBox x:Name ="ListProduct"  HorizontalAlignment="Left" Height="288" Margin="406,3,0,0" VerticalAlignment="Top" Width="142" />
+        <ListBox x:Name ="ListValue"  HorizontalAlignment="Left" Height="288" Margin="552,3,0,0" VerticalAlignment="Top" Width="143" />
+        <ListBox x:Name ="ListQuality"  HorizontalAlignment="Left" Height="288" Margin="700,3,0,0" VerticalAlignment="Top" Width="143" />
+        <ListBox x:Name ="ListFoodShopRelation"  HorizontalAlignment="Left" Height="288" Margin="652,3,-0.4,0" VerticalAlignment="Top" Width="142" Visibility="Hidden" />
+        <ListBox x:Name ="ListImages"  HorizontalAlignment="Left" Height="288" Margin="109,3,0,0" VerticalAlignment="Top" Width="142">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding Path=ImagePath}" Width="100" Height="100"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <CheckBox x:Name="DamagedCheckBox" Content="Is the Food damaged?" HorizontalAlignment="Left" Margin="700,299,0,0" VerticalAlignment="Top" Height="15" Width="140" Checked="CheckBoxShowImagesQuality" Unchecked="CheckBoxShowImagesQuality"/>
+        <Image x:Name="BackButton" Height="100" Width="100" Margin="4,3,889.6,317"  Source="Images/buttonup_640.png" MouseLeftButtonDown="Image_MouseLeftButtonDown" MouseLeftButtonUp="Image_MouseLeftButtonUp"/>
+        <Image x:Name="AddImage" Height="108" Width="92" Margin="128,319,773.6,-7" Source="Images/imagebuttonup_640.png" MouseLeftButtonDown="AddImageButtonDown" MouseLeftButtonUp="AddNewImage"/>
+        <Image x:Name="AddShop" Height="108" Width="92" Margin="286,319,615.6,-7"  Source="Images/shopbuttonup_640.png" MouseLeftButtonDown="AddShopButtonDown" MouseLeftButtonUp="AddNewShop"/>
+        <Image x:Name="AddProduct" Height="108" Width="92" Margin="432,319,469.6,-7"  Source="Images/productbuttonup_640.png" MouseLeftButtonDown="AddProductButtonDown" MouseLeftButtonUp="AddNewProduct"/>
+        <Image x:Name="AddValue" Height="108" Width="92" Margin="583,319,318.6,-7"  Source="Images/valuebuttonup_640.png" MouseLeftButtonDown="AddValueButtonDown" MouseLeftButtonUp="AddNewValue"/>
+        <Image x:Name="AddQuality" Height="108" Width="92" Margin="733,319,168.6,-7"  Source="Images/qualitybuttonup_640.png" MouseLeftButtonDown="AddQualityButtonDown" MouseLeftButtonUp="AddNewQuality"/>
+        <Image x:Name="Upload" Height="148" Width="132" Margin="862,279,-0.4,-7"  Source="Images/uploadbuttonup_640.png" MouseLeftButtonDown="UploadButtonDown" MouseLeftButtonUp="AddItemToFoodShopRelation"/>
+    </Grid>
+</Window>

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 14.875" name="LinqToSql">
+  <DataContextMoniker Name="/LinqToSqlDataContext" />
+  <nestedChildShapes>
+    <classShape Id="be553c00-b484-459a-b7f5-9469f2d0bdc9" absoluteBounds="0.75, 4.75, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/LinqToSqlDataContext/Food" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6ecc9709-de7f-4b98-adad-3c013c7194fd" absoluteBounds="0.765, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="585a674d-0306-4856-bcd9-8b107d9ac073" absoluteBounds="0.75, 7.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/LinqToSqlDataContext/ValueTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="14d692ea-d973-4f52-ad9c-69c8363a0f3c" absoluteBounds="0.765, 7.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8e4ef863-e3d7-4323-9ac5-113576d1e81f" absoluteBounds="0.75, 2.25, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/LinqToSqlDataContext/FoodQuality" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5312cc13-d654-400a-9a00-66c8c7b982f8" absoluteBounds="0.765, 2.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="762466c4-518c-48c2-8f70-13b62fe25c23" absoluteBounds="3.5, 4.375, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/LinqToSqlDataContext/FoodShopRelation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95de5fc6-9fe9-44a4-a7f6-4481884be375" absoluteBounds="3.515, 4.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aebf8dc2-cabf-45a9-9b55-afe42940f5a5" absoluteBounds="3.5, 1.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/LinqToSqlDataContext/FoodShopRelationBuy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="baa3a331-a027-4313-a01a-2d27abfc3a06" absoluteBounds="3.515, 1.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dbde137f-e226-45fd-9360-e66a5d674112" absoluteBounds="3.5, 7, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/LinqToSqlDataContext/History" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0186677-ced5-44bf-a3ee-416bb0933af7" absoluteBounds="3.515, 7.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4d39164d-2996-4ea2-9ca1-0faf3c2006c1" absoluteBounds="0.75, 9.125, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/LinqToSqlDataContext/ImagesTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2af51d6-61a6-496d-ad04-42b4b197f074" absoluteBounds="0.765, 9.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9676a2d0-e031-4568-a453-4df5e099040b" absoluteBounds="0.75, 13, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LinqToSqlDataContext/LoginTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ecf5762f-711c-40db-92b6-bc8f91e3049f" absoluteBounds="0.765, 13.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0ec5f789-0050-489f-b138-82f49de6d584" absoluteBounds="0.75, 11.125, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/LinqToSqlDataContext/ShopLocation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f5721aee-baa2-4276-89c5-a6131a87d81d" absoluteBounds="0.765, 11.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 5.34699625651042); (3.04166666666667 : 5.34699625651041 : JumpStart); (3.48958333333333 : 5.34699625651042 : JumpEnd); (3.5 : 5.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSqlDataContext/Food/Food_FoodShopRelation" />
+      <nodes>
+        <classShapeMoniker Id="be553c00-b484-459a-b7f5-9469f2d0bdc9" />
+        <classShapeMoniker Id="762466c4-518c-48c2-8f70-13b62fe25c23" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.4237854858774); (3.125 : 3.7987854858774); (3.125 : 5.87384924934896); (3.13541666666667 : 5.87384924934896 : JumpStart); (3.48958333333333 : 5.87384924934896 : JumpEnd); (3.5 : 5.87384924934896)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSqlDataContext/FoodQuality/FoodQuality_FoodShopRelation" />
+      <nodes>
+        <classShapeMoniker Id="8e4ef863-e3d7-4323-9ac5-113576d1e81f" />
+        <classShapeMoniker Id="762466c4-518c-48c2-8f70-13b62fe25c23" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.27112348292268); (3.06607443490112 : 6.95504904802155 : JumpStart); (3.24642556509888 : 6.7746979178238 : JumpEnd); (3.28125 : 6.73987348292268); (3.28125 : 4.82974612825521); (3.32291666666667 : 4.82974612825521 : JumpStart); (3.48958333333333 : 4.82974612825521 : JumpEnd); (3.5 : 4.82974612825521)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSqlDataContext/ValueTable/ValueTable_FoodShopRelation" />
+      <nodes>
+        <classShapeMoniker Id="585a674d-0306-4856-bcd9-8b107d9ac073" />
+        <classShapeMoniker Id="762466c4-518c-48c2-8f70-13b62fe25c23" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.78214495227364); (3.06607443490112 : 4.46607051737252 : JumpStart); (3.27767556509888 : 4.25446938717476 : JumpEnd); (3.28125 : 4.25089495227364); (3.28125 : 2.32774983723958); (3.5 : 2.32774983723958)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSqlDataContext/Food/Food_FoodShopRelationBuy" />
+      <nodes>
+        <classShapeMoniker Id="be553c00-b484-459a-b7f5-9469f2d0bdc9" />
+        <classShapeMoniker Id="aebf8dc2-cabf-45a9-9b55-afe42940f5a5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.92912475585937); (3.07291666666667 : 2.92912475585937 : JumpStart); (3.48958333333333 : 2.92912475585937 : JumpEnd); (3.5 : 2.92912475585937)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSqlDataContext/FoodQuality/FoodQuality_FoodShopRelationBuy" />
+      <nodes>
+        <classShapeMoniker Id="8e4ef863-e3d7-4323-9ac5-113576d1e81f" />
+        <classShapeMoniker Id="aebf8dc2-cabf-45a9-9b55-afe42940f5a5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.26285738090946); (3.06607443490112 : 6.94678294600833 : JumpStart); (3.21517556509888 : 6.79768181581058 : JumpEnd); (3.21875 : 6.79410738090946); (3.21875 : 1.75762291861979); (3.5 : 1.75762291861979)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSqlDataContext/ValueTable/ValueTable_FoodShopRelationBuy" />
+      <nodes>
+        <classShapeMoniker Id="585a674d-0306-4856-bcd9-8b107d9ac073" />
+        <classShapeMoniker Id="aebf8dc2-cabf-45a9-9b55-afe42940f5a5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.94399251302083); (3.125 : 6.31899251302083); (3.125 : 8.27005126953125); (3.16666666666667 : 8.27005126953125 : JumpStart); (3.48958333333333 : 8.27005126953125 : JumpEnd); (3.5 : 8.27005126953125)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSqlDataContext/Food/Food_History" />
+      <nodes>
+        <classShapeMoniker Id="be553c00-b484-459a-b7f5-9469f2d0bdc9" />
+        <classShapeMoniker Id="dbde137f-e226-45fd-9360-e66a5d674112" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.43205158789063); (3.09732443490112 : 3.77937602279175 : JumpStart); (3.34017556509888 : 4.0222271529895 : JumpEnd); (3.34375 : 4.02580158789062); (3.34375 : 7.60377363476562); (3.5 : 7.60377363476562)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSqlDataContext/FoodQuality/FoodQuality_History" />
+      <nodes>
+        <classShapeMoniker Id="8e4ef863-e3d7-4323-9ac5-113576d1e81f" />
+        <classShapeMoniker Id="dbde137f-e226-45fd-9360-e66a5d674112" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.93691245214844); (3.04166666666667 : 7.93691245214844 : JumpStart); (3.48958333333333 : 7.93691245214844 : JumpEnd); (3.5 : 7.93691245214844)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSqlDataContext/ValueTable/ValueTable_History" />
+      <nodes>
+        <classShapeMoniker Id="585a674d-0306-4856-bcd9-8b107d9ac073" />
+        <classShapeMoniker Id="dbde137f-e226-45fd-9360-e66a5d674112" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.14520502714343); (3.09732443490112 : 8.79788059224231 : JumpStart); (3.30892556509888 : 8.58627946204455 : JumpEnd); (3.4375 : 8.45770502714343); (3.4375 : 6.13727574576823); (3.5 : 6.13727574576823)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSqlDataContext/ImagesTable/ImagesTable_FoodShopRelation" />
+      <nodes>
+        <classShapeMoniker Id="4d39164d-2996-4ea2-9ca1-0faf3c2006c1" />
+        <classShapeMoniker Id="762466c4-518c-48c2-8f70-13b62fe25c23" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.13693892513021); (3.09732443490112 : 8.78961449022909 : JumpStart); (3.30892556509888 : 8.57801336003133 : JumpEnd); (3.40625 : 8.48068892513021); (3.40625 : 2.62843729654948); (3.5 : 2.62843729654948)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSqlDataContext/ImagesTable/ImagesTable_FoodShopRelationBuy" />
+      <nodes>
+        <classShapeMoniker Id="4d39164d-2996-4ea2-9ca1-0faf3c2006c1" />
+        <classShapeMoniker Id="aebf8dc2-cabf-45a9-9b55-afe42940f5a5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.37390628310296); (3.07291666666667 : 9.37390628310296 : JumpStart); (3.33333333333333 : 9.37390628310296 : JumpEnd); (3.5 : 9.37390628310296)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSqlDataContext/ImagesTable/ImagesTable_History" />
+      <nodes>
+        <classShapeMoniker Id="4d39164d-2996-4ea2-9ca1-0faf3c2006c1" />
+        <classShapeMoniker Id="dbde137f-e226-45fd-9360-e66a5d674112" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 13.0315709075521); (3.15625 : 12.6253209075521); (3.15625 : 2.04268637792969); (3.5 : 2.04268637792969)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSqlDataContext/LoginTable/LoginTable_FoodShopRelationBuy" />
+      <nodes>
+        <classShapeMoniker Id="9676a2d0-e031-4568-a453-4df5e099040b" />
+        <classShapeMoniker Id="aebf8dc2-cabf-45a9-9b55-afe42940f5a5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 13.8363356425781); (4.5 : 13.8363356425781); (4.5 : 9.5401025390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSqlDataContext/LoginTable/LoginTable_History" />
+      <nodes>
+        <classShapeMoniker Id="9676a2d0-e031-4568-a453-4df5e099040b" />
+        <classShapeMoniker Id="dbde137f-e226-45fd-9360-e66a5d674112" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 11.1837801698718); (3.09732443490112 : 10.8364557349707 : JumpStart); (3.21517556509888 : 10.7186046047729 : JumpEnd); (3.25 : 10.6837801698718); (3.25 : 5.61042275292969); (3.26041666666667 : 5.61042275292969 : JumpStart); (3.48958333333333 : 5.61042275292969 : JumpEnd); (3.5 : 5.61042275292969)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSqlDataContext/ShopLocation/ShopLocation_FoodShopRelation" />
+      <nodes>
+        <classShapeMoniker Id="0ec5f789-0050-489f-b138-82f49de6d584" />
+        <classShapeMoniker Id="762466c4-518c-48c2-8f70-13b62fe25c23" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 11.1681664216246); (3.1875 : 10.7306664216246); (3.1875 : 1.4725594593099); (3.5 : 1.4725594593099)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSqlDataContext/ShopLocation/ShopLocation_FoodShopRelationBuy" />
+      <nodes>
+        <classShapeMoniker Id="0ec5f789-0050-489f-b138-82f49de6d584" />
+        <classShapeMoniker Id="aebf8dc2-cabf-45a9-9b55-afe42940f5a5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 11.7826388414463); (3.07291666666667 : 11.7826388414463 : JumpStart); (3.23958333333333 : 11.7826388414463 : JumpEnd); (3.9687475 : 11.7826388414463); (3.9687475 : 9.5401025390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSqlDataContext/ShopLocation/ShopLocation_History" />
+      <nodes>
+        <classShapeMoniker Id="0ec5f789-0050-489f-b138-82f49de6d584" />
+        <classShapeMoniker Id="dbde137f-e226-45fd-9360-e66a5d674112" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
