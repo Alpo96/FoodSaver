@@ -9,4 +9,5 @@ Igyekeztem a legtöbb adatbázis műveletet lefedeni benne:
 - Módosítások
   
 Az adatbázis táblák:
+
 <img width="555" height="573" alt="image" src="https://github.com/user-attachments/assets/0a2489f8-34ad-4d5a-a118-2bb732994c61" />
